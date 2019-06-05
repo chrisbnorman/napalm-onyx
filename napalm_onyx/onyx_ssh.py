@@ -684,7 +684,72 @@ class ONYXSSHDriver(NetworkDriver):
         raise NotImplementedError("__get_ntp_stats is not supported yet for onyx devices")
 
     def get_interfaces_ip(self):
-        raise NotImplementedError("get_interfaces_ip is not supported yet for onyx devices")
+        """
+        Get ip interface details.
+
+        last_flapped is not implemented
+
+        Example Output:
+
+        {
+            "Interface mgmt1 status": [
+                {
+                    "Comment": "",
+                    "DHCP running": "yes (but no valid lease)",
+                    "DHCPv6 running": "yes (but no valid lease)",
+                    "IP address": "",
+                    "Duplex": "UNKNOWN",
+                    "Interface source": "bridge",
+                    "IPv6 enabled": "yes",
+                    "HW address": "50:6B:4B:27:B3:67",
+                    "MTU": "1500",
+                    "Autoconf enabled": "no",
+                    "Link up": "no",
+                    "Netmask": "",
+                    "Interface type": "ethernet",
+                    "Autoconf route": "yes",
+                    "Autoconf privacy": "no",
+                    "Admin up": "yes",
+                    "Speed": "UNKNOWN"
+                },
+                {
+                    "Rx": [
+                        {
+                            "discards": "0",
+                            "errors": "0",
+                            "bytes": "0",
+                            "frame": "0",
+                            "packets": "0",
+                            "mcast packets": "0",
+                            "overruns": "0"
+                        }
+                    ]
+                },
+                {
+                    "Tx": [
+                        {
+                            "discards": "0",
+                            "errors": "0",
+                            "queue len": "1000",
+                            "bytes": "0",
+                            "packets": "0",
+                            "overruns": "0",
+                            "collisions": "0",
+                            "carrier": "0"
+                        }
+                    ]
+                }
+            ]
+        },
+        """
+        no_paging_enable_command = 'no cli session paging enable'
+        self.device.send_command(no_paging_enable_command)
+        command = 'show ip interface vrf all | json-print'
+        output = self.device.send_command(command)
+        if not output:
+            return {}
+
+        return output
 
     def get_mac_address_table(self):
         """Return a lists of dictionaries. Each dictionary represents an entry in the MAC Address
