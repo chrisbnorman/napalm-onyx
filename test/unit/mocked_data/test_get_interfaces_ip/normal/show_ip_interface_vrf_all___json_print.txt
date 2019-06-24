@@ -1,0 +1,102 @@
+[
+    {
+        "Interface mgmt1 status": [
+            {
+                "Comment": "",
+                "DHCP running": "yes (but no valid lease)",
+                "DHCPv6 running": "yes (but no valid lease)",
+                "IP address": "",
+                "Duplex": "UNKNOWN",
+                "Interface source": "bridge",
+                "IPv6 enabled": "yes",
+                "HW address": "50:6B:4B:26:8C:7D",
+                "MTU": "1500",
+                "Autoconf enabled": "no",
+                "Link up": "no",
+                "Netmask": "",
+                "Interface type": "ethernet",
+                "Autoconf route": "yes",
+                "Autoconf privacy": "no",
+                "Admin up": "yes",
+                "Speed": "UNKNOWN"
+            },
+            {
+                "Rx": [
+                    {
+                        "discards": "0",
+                        "errors": "0",
+                        "bytes": "0",
+                        "frame": "0",
+                        "packets": "0",
+                        "mcast packets": "0",
+                        "overruns": "0"
+                    }
+                ]
+            },
+            {
+                "Tx": [
+                    {
+                        "discards": "0",
+                        "errors": "0",
+                        "queue len": "1000",
+                        "bytes": "0",
+                        "packets": "0",
+                        "overruns": "0",
+                        "collisions": "0",
+                        "carrier": "0"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Interface mgmt0 status": [
+            {
+                "Comment": "",
+                "DHCP running": "yes (but no valid lease)",
+                "DHCPv6 running": "yes (but no valid lease)",
+                "IP address": "",
+                "Duplex": "UNKNOWN",
+                "Interface source": "bridge",
+                "IPv6 enabled": "yes",
+                "HW address": "50:6B:4B:26:8C:7C",
+                "MTU": "1500",
+                "Autoconf enabled": "no",
+                "Link up": "no",
+                "Netmask": "",
+                "Interface type": "ethernet",
+                "Autoconf route": "yes",
+                "Autoconf privacy": "no",
+                "Admin up": "yes",
+                "Speed": "UNKNOWN"
+            },
+            {
+                "Rx": [
+                    {
+                        "discards": "0",
+                        "errors": "0",
+                        "bytes": "0",
+                        "frame": "0",
+                        "packets": "0",
+                        "mcast packets": "0",
+                        "overruns": "0"
+                    }
+                ]
+            },
+            {
+                "Tx": [
+                    {
+                        "discards": "0",
+                        "errors": "0",
+                        "queue len": "1000",
+                        "bytes": "0",
+                        "packets": "0",
+                        "overruns": "0",
+                        "collisions": "0",
+                        "carrier": "0"
+                    }
+                ]
+            }
+        ]
+    }
+]
