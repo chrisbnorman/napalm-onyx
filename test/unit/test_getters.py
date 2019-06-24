@@ -73,7 +73,7 @@ class TestGetter(BaseTestGetters):
         assert len(get_interfaces_ip) > 0
         return get_interfaces_ip
         
-    @wrap_test_cases
+    @wrap_test_case
     def test_get_lldp_neighbors(self, test_case):
         get_lldp_neighbors = self.device.get_lldp_neighbors()
         assert len(get_lldp_neighbors) > 0
