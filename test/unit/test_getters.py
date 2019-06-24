@@ -71,9 +71,13 @@ class TestGetter(BaseTestGetters):
         """Test get_interfaces_ip."""
         get_interfaces_ip = self.device.get_interfaces_ip()
         assert len(get_interfaces_ip) > 0
-
         return get_interfaces_ip
 
+    def test_get_lldp_neighbors(self, test_case):
+        get_lldp_neighbors = self.device.get_lldp_neighbors()
+        assert len(get_lldp_neighbors) > 0
+        return get_lldp_neighbors
+        
     def test_method_signatures(self):
         """Test that all methods have the same signature.
 
