@@ -66,6 +66,14 @@ class TestGetter(BaseTestGetters):
         """There is little to test with this function."""
         raise NotImplementedError
 
+    @wrap_test_cases
+    def test_get_interfaces_ip(self, test_case):
+        """Test get_interfaces_ip."""
+        get_interfaces_ip = self.device.get_interfaces_ip()
+        assert len(get_interfaces_ip) > 0
+
+        return get_interfaces_ip
+
     def test_method_signatures(self):
         """Test that all methods have the same signature.
 
