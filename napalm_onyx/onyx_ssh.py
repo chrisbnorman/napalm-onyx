@@ -769,7 +769,7 @@ class ONYXSSHDriver(NetworkDriver):
         output = self.device.send_command(command)
         if not output:
             return {}
-
+        output = json.loads(output)
         return output
 
     def get_mac_address_table(self):
